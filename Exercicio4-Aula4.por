@@ -1,31 +1,30 @@
+/*
+Crie um programa que receba valores do usuário para preencher uma matriz 3X3, e
+em seguida, exiba a soma dos valores dela e a soma dos valores da primeira diagonal, ou seja, diagonal principal.
+*/
 programa
 {
 	
 	funcao inicio()
 	{
-		inteiro x
-		escreva("Escolha um número: ")
-		leia(x)
-
-		se (x<0)
+		inteiro m[3][3],l,c,x,somaTotal=0,somaDiagonal=0
+		para(l=0;l<3;l++)
 		{
-			escreva("O número ",x, " é um número negativo")
+			para(c=0;c<3;c++)
+			{
+				escreva("\nDigite um número: ")
+				leia(x)
+				m[l][c]=x
+				somaTotal+=x
+				se(l==c)
+				{
+					somaDiagonal+=m[l][c]	
+				}
+				
+			}
 		}
-
-		senao 
-		{
-			escreva("O número ",x, " é um número positivo")
-		}
-
-		se (x%2!=0)
-		{
-			escreva(" e ímpar.")
-		}
-		senao
-		{
-			escreva(" e par.")
-		}
-		
+		escreva("\nA soma total é: ",somaTotal)
+		escreva("\nA soma da diagonal é: ",somaDiagonal)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -33,9 +32,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 307; 
+ * @POSICAO-CURSOR = 442; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
+ * @SIMBOLOS-INSPECIONADOS = {m, 10, 10, 1}-{l, 10, 18, 1}-{c, 10, 20, 1}-{x, 10, 22, 1}-{somaTotal, 10, 24, 9}-{somaDiagonal, 10, 36, 12};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */

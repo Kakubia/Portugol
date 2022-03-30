@@ -1,3 +1,11 @@
+/*
+Elabore um sistema que dada a idade de um nadador classifique-o em uma das seguintes categorias:
+Infantil A = 5 a 7 anos
+Infantil B = 8 a 11 anos
+Juvenil A = 12 a 13 anos
+Juvenil B = 14 a 17 anos
+Adultos = Maiores de 18 anos
+ */
 programa
 {
 	
@@ -15,15 +23,15 @@ programa
 		{
 			escreva("Categoria: Infantil B")
 		}
-		se (idade==12 e idade==13)
+		se (idade>=12 e idade<=13)
 		{
-			escreva("Categoria: Infantil C")
+			escreva("Categoria: Juvenil A")
 		}
 		se (idade>=14 e idade<=17)
 		{
-			escreva("Categoria: Infantil D")
+			escreva("Categoria: Juvenil B")
 		}
-		senao (idade>=18)
+		se (idade>=18)
 			escreva("Categoria: Adultos")
 		
 	}
@@ -35,9 +43,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 407; 
+ * @POSICAO-CURSOR = 494; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
+ * @SIMBOLOS-INSPECIONADOS = {idade, 14, 10, 5};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
